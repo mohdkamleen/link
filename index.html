@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links page</title>
+    <link rel="stylesheet" href="bootstrap4.css">
+    <link rel="stylesheet" href="icon.css">
+</head>
+<body>  
+    
+    <!-- nav section  -->
+
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Kamleen</a>
+      
+        <!-- Links -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active disabled"> <b> Mysql </b> </a>
+            </li>
+    
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"> refresh  </a>
+            </li> 
+            
+          </ul>
+      </nav>  <br>
+
+
+    <div class="container">
+        <h1> Execute SQL script from command line </h1>
+ 
+        <h4 class="">Take a look at the sqlcmd utility. It allows you to execute SQL from the command line.</h4>
+        <li>start your local server</li>
+        <li>open command prompt</li> <br>
+
+        <p class="text-light bg-dark p-3"> Microsoft Windows [Version 10.0.18362.900] <br>
+            (c) 2019 Microsoft Corporation. All rights reserved. </p>
+        <p class="text-light bg-dark p-3"> C:\Users\Lenovo>cd../../../.. </p>
+         
+        <p class="text-light bg-dark p-3"> C:\>cd xampp </p>
+
+        <p class="text-light bg-dark p-3"> C:\xampp>cd mysql </p>
+
+        <p class="text-light bg-dark p-3"> C:\xampp\mysql>cd bin </p>
+
+        <p class="text-light bg-dark p-3"> C:\xampp\mysql\bin>mysql -u root -h localhost -p </p>
+        <p class="alert alert-dark"> Enter password: </p>
+
+
+        <p class="alert alert-dark"> 
+            Welcome to the MariaDB monitor.  Commands end with ; or \g. <br>
+            Your MariaDB connection id is 8 <br>
+            Server version: 10.4.13-MariaDB mariadb.org binary distribution <br> <br>
+            
+            Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others. </p>
+        <p class="text-light bg-dark p-3"> MariaDB [(none)]> </p>
+
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> show databases; </p> 
+            <pre class="alert alert-dark">
+            +--------------------+
+            | Database           |
+            +--------------------+
+            | information_schema |
+            | kamleen            |
+            | mysql              |
+            | performance_schema |
+            | phpmyadmin         |
+            | test               |
+            +--------------------+
+            6 rows in set (0.174 sec) 
+            </pre> 
+
+        <p class="text-light bg-dark p-3"> MariaDB [(none)]> use kamleen; </p>
+        <p class="alert alert-dark"> Database changed </p>
+
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> show tables; </p>
+        <p class="alert alert-dark"> Empty set (0.012 sec) </p>
+
+
+        <p class="text-light bg-dark p-3"> 
+            MariaDB [kamleen]> create table user( <br>
+            -> id int(250) auto_increment not null primary key,  <br>
+            -> name varchar(250) not null, <br>
+            -> password varchar(250) not null <br>
+            -> ); 
+        </p>
+        <p class="alert alert-dark"> Query OK, 0 rows affected (0.246 sec) </p>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> show tables; </p>
+        <pre class="alert alert-dark"> 
+            +-------------------+
+            | Tables_in_kamleen |
+            +-------------------+
+            | user              |
+            +-------------------+
+            1 row in set (0.001 sec)   
+        </pre>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> select * from user;  </p>
+        <p class="alert alert-dark"> Empty set (0.159 sec) </p>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> describe user; or desc user; </p>
+        <pre class="alert alert-dark"> 
+            +----------+--------------+------+-----+---------+----------------+
+            | Field    | Type         | Null | Key | Default | Extra          |
+            +----------+--------------+------+-----+---------+----------------+
+            | id       | int(250)     | NO   | PRI | NULL    | auto_increment |
+            | name     | varchar(250) | NO   |     | NULL    |                |
+            | password | varchar(250) | NO   |     | NULL    |                |
+            +----------+--------------+------+-----+---------+----------------+
+            3 rows in set (0.071 sec)
+        </pre>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> INSERT INTO `user`(`name`, `password`) VALUES ("Mohd Kamleen","kamleen123");  </p>
+        <p class="alert alert-dark"> Query OK, 1 row affected (0.049 sec) </p>
+
+        <p class="text-light bg-dark p-3">  MariaDB [kamleen]> select * from user; </p>
+        <pre class="alert alert-dark"> 
+            +----+--------------+------------+
+            | id | name         | password   |
+            +----+--------------+------------+
+            |  1 | Mohd Kamleen | kamleen123 |
+            +----+--------------+------------+
+            1 row in set (0.000 sec) 
+        </pre>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> INSERT INTO `user`(`name`, `password`) VALUES (" Kamleen","123456");  </p>
+        <p class="alert alert-dark"> Query OK, 1 row affected (0.049 sec) </p>
+
+        <p class="text-light bg-dark p-3">  MariaDB [kamleen]> select * from user; </p>
+        <pre class="alert alert-dark"> 
+            +----+--------------+------------+
+            | id | name         | password   |
+            +----+--------------+------------+
+            |  1 | Mohd Kamleen | kamleen123 |
+            |  2 | Kamleen      | 123456     |
+            +----+--------------+------------+
+            2 rows in set (0.000 sec)
+        </pre>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> UPDATE `user` SET `name`= "Mohd",`password`="mohd123" WHERE id = 1;  </p>
+        <pre class="alert alert-dark"> 
+            +----+--------------+------------+
+            | id | name         | password   |
+            +----+--------------+------------+
+            |  1 | Mohd         | mohd123    |
+            |  2 | Kamleen      | 123456     |
+            +----+--------------+------------+
+            2 rows in set (0.000 sec)
+        </pre>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> drop table user;  </p>
+        <p class="alert alert-dark"> Query OK, 0 rows affected (0.230 sec) </p>
+
+        <p class="text-light bg-dark p-3">   </p>
+        <p class="alert alert-dark">  </p>
+
+        <p class="text-light bg-dark p-3"> MariaDB [kamleen]> show tables;  </p>
+        <p class="alert alert-dark"> Empty set (0.001 sec) </p>
+ 
+                                   
+    </div>
+</body>
+</html>
