@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links page</title>
     <link rel="stylesheet" href="bootstrap4.css"> 
+    <link rel="stylesheet" href="icon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
@@ -35,7 +36,7 @@
         <!-- Links -->
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active disabled"> <b> Links </b> </a>
+                <a class="nav-link active disabled"> <b> CDN Links </b> </a>
             </li>
     
             <li class="nav-item">
@@ -65,66 +66,71 @@
 
         <ul>
             <li>
-                <a href="animate.css" > Animate </a>
-                <code class="text-success"  >css-file</code> 
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/animate.css"></i>
+                <a href="animate.css" download="animation"> Animate </a>
+                <code class="text-success"  >&emsp;&emsp;&emsp;&emsp; (css-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/animate.css
             </li>
 
 
             <li>
-                <a href="bootstrap4.css"> Bootstrap 4 </a>
-                <code class="text-success">css-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/bootstrap4.css"></i>
+                <a href="bootstrap4.css" download="bootstrap-4"> Bootstrap 4 </a>
+                <code class="text-success">&emsp;&emsp;(css-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/bootstrap4.css  
             </li>
 
 
             <li>
-                <a href="bootstrap5.css"> Bootstrap 5 </a>
-                <code class="text-success">css-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/bootstrap5.css"></i>
+                <a href="bootstrap5.css" download="bootstrap-5"> Bootstrap 5 </a>
+                <code class="text-success">&emsp;&emsp;(css-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/bootstrap5.css 
             </li> 
 
 
             <li>
-                <a href="bootstrap.js"> Bootstrap  </a>
-                <code class="text-danger">js-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/bootstrap.js"></i>
+                <a href="bootstrap.js" download="bootstrap-js"> Bootstrap</a>
+                <code class="text-danger">&emsp;&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/bootstrap.js 
             </li>
 
 
             <li>
-                <a href="clipboard.js"> ClipBoard </a>
-                <code class="text-danger">js-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/clipboard.js"></i>
+                <a href="clipboard.js" download="clipboard"> ClipBoard </a>
+                <code class="text-danger">&emsp;&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/clipboard.js 
             </li>
 
 
             <li>
-                <a href="icon.css"> Font Awesome </a>
-                <code class="text-success">css-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/icon.css"></i>
+                <a href="icon.css" download="font awesome"> Font Awesome </a>
+                <code class="text-success"> (css-file) &emsp;</code> https://mohdkamleen.github.io/link/icon.css 
             </li>
 
 
             <li>
-                <a href="firebase.js"> Firebase  </a>
-                <code class="text-danger">js-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/firebase.js"></i>
+                <a href="firebase.js" download="firebase"> Firebase  </a>
+                <code class="text-danger">&emsp;&emsp;&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/firebase.js 
             </li>
 
 
             <li>
-                <a href="sweetalert.js"> Sweetalert  </a>
-                <code class="text-danger">js-file</code>
-                <i class="fa fa-copy btn" data-clipboard-text="https://mohdkamleen.github.io/link/sweetalert.js"></i>
+                <a href="fireworks.js" download="fireworks"> Fireworks  </a>
+                <code class="text-danger">&emsp;&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/fireworks.js
+            </li>
+
+            
+            <li>
+                <a href="jquery.js" download="jquery"> JQuery  </a>
+                <code class="text-danger">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/jquery.js
             </li>
 
 
             <li>
-                <a href="jquery.js"> JQuery  </a>
-                <code class="text-danger">js-file</code>
-                <i class="btn fa fa-copy " data-clipboard-text='https://mohdkamleen.github.io/link/jquery.js'></i>
+                <a href="pip.py" download="pip"> Pip-get  </a>
+                <code class="text-secondary">&emsp;&emsp; (python-file) &emsp;&emsp;</code> https://mohdkamleen.github.io/link/pip.py
             </li>
+
+
+            <li>
+                <a href="sweetalert.js" download="sweetalert"> Sweetalert  </a>
+                <code class="text-danger">&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code>  https://mohdkamleen.github.io/link/sweetalert.js 
+            </li>
+
+ 
  
         </ul>
 
@@ -180,7 +186,17 @@
           </p>
 
   </section>
+ 
+
      <script src="clipboard.js"></script>
+     <script>
+         function copy(){
+             document.getElementById('copy').select(); 
+             document.execCommand('copy');
+         }
+     </script>
+
+    
 
 </body>
 </html>
