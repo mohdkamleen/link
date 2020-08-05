@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
+        body{
+            transition: all .3s ease-in-out;
+        }
+
          section{
             font-size: 20px;
             padding: 20px 5%;
@@ -26,13 +30,13 @@
  
     </style>
 </head>
-<body>  
+<body id="demo">
     
     <!-- nav section  --> 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Kamleen</a>
+        <a class="navbar-brand" href="#" onclick="body_rotate()" >Kamleen</a>
       
         <!-- Links -->
         <ul class="nav nav-tabs">
@@ -64,7 +68,6 @@
             hosting services, which is why they opt for CDNs.
 
         </p>
-
         <ul>
             <li>
                 <a href="animate.css" download="animation"> Animate </a>
@@ -131,6 +134,12 @@
                 <code class="text-danger">&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code>  https://mohdkamleen.github.io/link/sweetalert.js 
             </li>
 
+
+            <li>
+                <a href="sweetalert2.js" download="sweetalert2"> Sweetalert 2 </a>
+                <code class="text-danger">&emsp;&emsp;&emsp; (js-file) &emsp;&emsp;</code>  https://mohdkamleen.github.io/link/sweetalert2.js 
+            </li>
+
  
  
         </ul>
@@ -190,14 +199,17 @@
  
 
      <script src="clipboard.js"></script>
+     <script src="sweetalert.js"></script>
      <script>
-         function copy(){
-             document.getElementById('copy').select(); 
-             document.execCommand('copy');
-         }
-     </script>
+         
+        //  function body_rotate(){  
+        //      document.body.setAttribute( 'style', '-webkit-transform: rotatez(5deg);');
+        //      document.getElementById('demo').style.transform = 'rotate(10deg)';
+        //      document.getElementById('demo').style.transform = 'skewX(160deg)' ;  
+        //      document.getElementById('demo').style.borderLeft = '2px solid gray';  
+        //      }
 
-    
+     </script> 
 
 </body>
 </html>
