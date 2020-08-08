@@ -24,11 +24,11 @@
         body{
             transition: all .3s ease-in-out; 
             color: #555555;
+            z-index: -2;
         }
 
          section{
-            font-size: 20px;
-            padding: 20px 5%;
+            font-size: 20px; 
             word-wrap: break-word;
          }
 
@@ -132,8 +132,8 @@
       }
     </style>
 </head>
-<body id="demo">
-     
+<body >
+    <section id="demo">
         <a class="search_icon" href="#" onclick="body_rotate()" > <i class="fa fa-search"></i> </a>
         
         <a class="navbar_icon" href="#" onclick="body_rotate()" > <i class="fa fa-bars"></i> </a> 
@@ -149,7 +149,7 @@
      <h1 class="text-center animate__animated animate__bounce">good weaver</h1>
     </div>
      
-      <section >
+     
   <p> 
             A content delivery network (CDN) refers to a 
             geographically distributed group of servers which work 
@@ -227,10 +227,12 @@
             //     })
             //      document.body.setAttribute( 'style', '-webkit-transform: rotatez(5deg);');
             if(document.getElementById('pop').style.display == 'block'){
-                 document.getElementById('pop').style.display = 'none';
+                 document.getElementById('demo').style.opacity = '1';
+                document.getElementById('pop').style.display = 'none';
 
             }else {
-                document.getElementById('pop').style.display = 'block';
+                 document.getElementById('pop').style.display = 'block';
+                 document.getElementById('demo').style.opacity = '.3';
             }
             //      document.getElementById('demo').style.transform = 'skewX(160deg)' ;  
             //      document.getElementById('demo').style.borderLeft = '2px solid gray';  
@@ -262,6 +264,8 @@
 
      </script> 
 
+
+</body>
 <div id="pop" >
     <h1 class="text-center p-3 " style="color: #555555;">search! message</h1>
     <input type="text" placeholder="Type a search message" class="search_input_feild">
@@ -271,8 +275,6 @@
 
     </div>
 </div>
-</body>
-
 
 </html>
  
