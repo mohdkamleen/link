@@ -193,38 +193,7 @@
      <script>
          
          function body_rotate(){  
-            // Swal.fire({
-            //     title: 'Submit your Github username',
-            //     input: 'text',
-            //     inputAttributes: {
-            //         autocapitalize: 'off'
-            //     },
-            //     showCancelButton: true,
-            //     confirmButtonText: 'Look up',
-            //     showLoaderOnConfirm: true,
-            //     preConfirm: (login) => {
-            //         return fetch(`//api.github.com/users/${login}`)
-            //         .then(response => {
-            //             if (!response.ok) {
-            //             throw new Error(response.statusText)
-            //             }
-            //             return response.json()
-            //         })
-            //         .catch(error => {
-            //             Swal.showValidationMessage(
-            //             `Request failed: ${error}`
-            //             )
-            //         })
-            //     },
-            //     allowOutsideClick: () => !Swal.isLoading()
-            //     }).then((result) => {
-            //     if (result.value) {
-            //         Swal.fire({
-            //         title: `${result.value.login}'s avatar`,
-            //         imageUrl: result.value.avatar_url
-            //         })
-            //     }
-            //     })
+             
             //      document.body.setAttribute( 'style', '-webkit-transform: rotatez(5deg);');
             if(document.getElementById('pop').style.display == 'block'){
                  document.getElementById('demo').style.opacity = '1';
@@ -267,7 +236,7 @@
 
 </body>
 <div id="pop" >
-    <h1 class="text-center p-3 " style="color: #555555;">search! message</h1>
+    <h1 class="text-center p-3 " style="color: #555555;"> search! message </h1>
     <input type="text" placeholder="Type a search message" class="search_input_feild">
     <div class="btn-group">
         <input type="button" value="cancel"  class=" btn search_button">
